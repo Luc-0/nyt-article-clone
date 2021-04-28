@@ -103,6 +103,67 @@ img {
   height: 16px;
 }
 
+.icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+
+  background-color: #eee;
+  border: 1px #eee solid;
+}
+
+.icon-circle:hover {
+  background-color: #fff;
+  border: 1px rgb(182, 182, 182) solid;
+}
+
+.icon-circle > * {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-circle.bg-transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.wp-icon-svg {
+  width: 16px;
+  height: 16px;
+  background-image: url('/images/icon-whatsapp.svg');
+}
+
+.comments-icon {
+  position: relative;
+  border: 1px solid rgb(102, 102, 102);
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.comments-icon::before {
+  position: absolute;
+  bottom: -7px;
+  left: 15px;
+  width: 0px;
+  display: block;
+  content: '';
+  border-color: rgb(102, 102, 102) transparent;
+  border-style: solid;
+  border-width: 6px 0px 0px 8px;
+}
+
+.comments-icon::after {
+  position: absolute;
+  bottom: -6px;
+  left: 16px;
+  width: 0px;
+  display: block;
+  content: '';
+  border-color: rgb(255, 255, 255) transparent;
+  border-style: solid;
+  border-width: 6px 0px 0px 6px;
+}
+
 .nyt-svg {
   height: auto;
   width: 195px;
@@ -126,18 +187,37 @@ img {
   grid-column: 3 / span 1;
 }
 
-.content-header .title div {
-  margin-top: 20px;
+.content-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2.3rem;
+  line-height: 3rem;
+  color: #121212;
+  margin-bottom: 20px;
+}
+
+.content-links {
+  border-top: 1px solid #ebebeb;
+  font-size: 0.9rem;
+  padding: 20px 0;
+}
+
+.content-links a {
+  text-decoration: none;
+}
+
+.content-links ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+  grid-auto-flow: column;
+  column-gap: 15px;
 }
 
 .content-header ul {
   display: flex;
   justify-content: start;
   list-style: none;
-}
-
-.content-header ul li {
-  display: block;
 }
 
 .wide-img {
